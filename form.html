@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Details</title>
+		<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+		<style type="text/css">
+			.titles {
+		font-family: 'Nunito', sans-serif;
+		font-size: 23px;
+		margin-bottom: 0px;
+		}
+		.card{
+		background-color: #fcfcfc;
+		margin: 2%;
+		margin-top: 3%;
+		padding: 3% 5% 5% 5%;
+		border-radius: 5px;
+		box-shadow: 1px 1px 10px #eee;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation Bar change your app name and fields you want to add in nav-bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container">
+				<a class="navbar-brand" href="#">App Name</a>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Signup card with styling -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="card">
+						<h2
+						style="text-align: center; font-family: 'Nunito', sans-serif;; font-size: 28px; font-weight: 600;">
+						Add details
+						</h2>
+						<!-- Add input tags as per your requirements -->
+						<form action="/signup/" method="POST">
+							<p class="titles">Name</p>
+							<input type="name" name="name" class="form-control" placeholder="Enter your name" required>
+							<p class="titles" style="margin-top: 2px;">2nd field</p>
+							<input type="username" name="username" class="form-control" placeholder=""
+							required>
+							<div class="titles" style="margin-top: 2px;">Drop Down
+								<select class="custom-select" style="width: 120px; margin: 10px;" name="user_type" required>
+									<option value="1">User_type1</option>
+									<option value="2">User_type2</option>
+								</select>
+							</div>
+							<!-- Upload an image if required -->
+							<p class="titles">Upload an image</p>
+							<input style="font-size: 15px; margin-top: 5px; margin-bottom: 15px;" type="file" name="image">
+							
+							<p class="titles">Text Area</p>
+							<textarea type="text" name="description" class="form-control" rows="3"
+							placeholder="" required></textarea>
+							<div class="submit">
+								<button type="submit" class="btn btn-md btn-success signup-btn">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</body>
+</html>

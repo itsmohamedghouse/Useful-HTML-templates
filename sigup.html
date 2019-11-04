@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Signup</title>
+		<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+		<style type="text/css">
+			.signup-titles {
+		font-family: 'Nunito', sans-serif;
+		font-size: 23px;
+		margin-bottom: 0px;
+		}
+		.signup-card{
+		background-color: #fcfcfc;
+		margin: 2%;
+		margin-top: 3%;
+		padding: 3% 5% 5% 5%;
+		border-radius: 5px;
+		box-shadow: 1px 1px 10px #eee;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation Bar change your app name and fields you want to add in nav-bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container">
+				<a class="navbar-brand" href="#">App Name</a>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Signup card with styling -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="signup-card">
+						<h2
+						style="text-align: center; font-family: 'Nunito', sans-serif;; font-size: 28px; font-weight: 600;">
+						Sign Up
+						</h2>
+						<form action="/signup/" method="POST">
+							<p class="signup-titles">Name</p>
+							<input type="name" name="name" class="form-control" placeholder="Enter your name" required>
+							<p class="signup-titles" style="margin-top: 2px;">Username</p>
+							<input type="username" name="username" class="form-control" placeholder="Enter your Username"
+							required>
+							<p class="signup-titles" style="margin-top: 2px;">Email</p>
+							<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+							<p class="signup-titles" style="margin-top: 2px;">Password</p>
+							<input type="password" name="password" class="form-control" placeholder="Enter your password"
+							required>
+							<div class="signup-titles" style="margin-top: 2px;">Select user type:
+								<select class="custom-select" style="width: 120px; margin: 10px;" name="user_type" required>
+									<option value="1">User_type1</option>
+									<option value="2">User_type2</option>
+								</select></div>
+								<div class="submit">
+									<button type="submit" class="btn btn-md btn-success signup-btn">SignIn</button>
+								</div>
+								<p style="font-family: 'Nunito', sans-serif; margin-top: 10px; font-size: 14px; opacity: .8;">
+									Have an account? <a href="/signin">SignUp</a>
+								</p>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+		</body>
+	</html>
